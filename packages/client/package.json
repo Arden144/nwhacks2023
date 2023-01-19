@@ -1,0 +1,27 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@nwhacks2023/client",
+    "version": "0.1.0",
+    "module": "index.ts",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@linaria/core": "^4.2.5",
+        "@linaria/react": "^4.3.3",
+        "@linaria/vite": "^4.2.5",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "@vitejs/plugin-react": "^3.0.1",
+        "bun-types": "^0.4.0",
+        "typescript": "^4.9.4",
+        "vite": "^4.0.4"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

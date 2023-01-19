@@ -1,0 +1,11 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "nwhacks2023",
+    "version": "0.1.0",
+    "type": "module",
+    "private": true,
+    "workspaces": [
+        "packages/client",
+        "packages/server"
+    ]
+}

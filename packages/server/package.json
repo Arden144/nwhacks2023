@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@nwhacks2023/server",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "index.ts",
+    "devDependencies": {
+        "bun-types": "^0.4.0"
+    }
+}
