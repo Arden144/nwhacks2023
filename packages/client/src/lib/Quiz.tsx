@@ -10,7 +10,7 @@ const container = css`
 const quiz = css`
   background-color: var(--background-color);
   border-radius: 2rem;
-  padding: 2rem;
+  padding: 0 1rem;
 `;
 
 const listButton = css`

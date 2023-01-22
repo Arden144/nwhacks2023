@@ -1,4 +1,3 @@
-import Button from "@lib/Button";
 import Quiz from "@lib/Quiz";
 import { trpc } from "@lib/trpc";
 import { css } from "@linaria/core";
@@ -7,6 +6,10 @@ import { Player } from "@livepeer/react";
 import { Video } from "model";
 import { useLayoutEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+
+const displayContents = css`
+  display: contents;
+`;
 
 const container = css`
   height: 100%;
@@ -17,16 +20,21 @@ const container = css`
 
 const Grid = styled.div`
   background-color: white;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   overflow-y: scroll;
-  position: relative;
-`;
 
-const Sidebar = styled.div``;
+  @media only screen and (min-width: 30em) {
+    padding: 1rem 2rem;
+  }
+
+  @media only screen and (min-width: 60em) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+`;
 
 const Header = styled.div`
   display: flex;
@@ -45,31 +53,25 @@ const Header = styled.div`
 `;
 
 const content = css`
-  // padding: 2rem;
-  position: sticky;
-  top: 0px;
+  @media only screen and (min-width: 60em) {
+    position: sticky;
+    top: 0px;
+  }
 `;
 
-const title = css`
-  font-family: CormorantVariable, Cormorant;
-  font-weight: 900;
-  font-variant: small-caps;
+const info = css`
+  padding: 0 1rem;
 `;
 
-interface VideoInfoProps {
-  video: Video;
-  onClick: () => void;
-}
+const logo = css`
+  height: 100%;
+  padding: 1.25rem 0;
+`;
 
 const list = css`
   display: flex;
   list-style: none;
-  padding: 0;
-`;
-
-const link = css`
-  text-decoration: none;
-  color: inherit;
+  gap: 1rem;
 `;
 
 const videoInfo = css`
@@ -79,6 +81,11 @@ const videoInfo = css`
   font-weight: 900;
   border-radius: 0.5rem;
 `;
+
+interface VideoInfoProps {
+  video: Video;
+  onClick: () => void;
+}
 
 const VideoInfo = ({ video, ...props }: VideoInfoProps) => {
   return (
@@ -96,7 +103,7 @@ function CoursePlayer() {
   useLayoutEffect(() => {
     if (!course.data) return;
     setVideo(course.data.videos[0]);
-  }, [course]);
+  }, [course.data]);
 
   if (course.isLoading) {
     return (
@@ -123,39 +130,38 @@ function CoursePlayer() {
   return (
     <div className={container}>
       <Header>
-        <h1 className={title}>ChainLearn</h1>
-        <span>
-          <Link to="/courses" className={link}>
-            Back to courses
-          </Link>
-          <Button>Sign out</Button>
-        </span>
+        <Link to="/" className={displayContents}>
+          <img src="/logo.svg" className={logo} />
+        </Link>
+        <Link to="/courses">Back to courses</Link>
       </Header>
       <Grid>
         <div>
           <div className={content}>
             {video ? (
-              <>
-                <Player playbackId={video.playbackId} />
-                <h2>
-                  {course.data.name} | {video?.name}
-                </h2>
-              </>
+              <Player playbackId={video.playbackId} />
             ) : (
               <h3>Select a video</h3>
             )}
-            <ul className={list}>
-              {(course.data.videos ?? []).map((video) => (
-                <li key={video.id}>
-                  <VideoInfo video={video} onClick={() => setVideo(video)} />
-                </li>
-              ))}
-            </ul>
+            <div className={info}>
+              {video && (
+                <h2>
+                  {course.data.name} | {video?.name}
+                </h2>
+              )}
+              <ul className={list}>
+                {(course.data.videos ?? []).map((video) => (
+                  <li key={video.id}>
+                    <VideoInfo video={video} onClick={() => setVideo(video)} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        <Sidebar>
+        <div>
           <Quiz course={course.data} />
-        </Sidebar>
+        </div>
       </Grid>
     </div>
   );

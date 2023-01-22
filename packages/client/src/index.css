@@ -42,6 +42,15 @@ h3, h3, h4 {
     font-family: InterVariable, Inter;
 }
 
+ul, ol {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 p {
     font-size: 20px;
 }
