@@ -1,10 +1,22 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
-    "name": "@nwhacks2023/server",
+    "name": "server",
     "version": "0.1.0",
     "type": "module",
-    "main": "index.ts",
+    "main": "src/exports.ts",
+    "scripts": {
+        "generate": "prisma generate --data-proxy"
+    },
+    "dependencies": {
+        "@prisma/client": "^4.9.0",
+        "@trpc/server": "^10.9.0",
+        "jose": "^4.11.2",
+        "model": "*",
+        "zod": "^3.20.2"
+    },
     "devDependencies": {
-        "bun-types": "^0.4.0"
+        "@cloudflare/workers-types": "^4.20221111.1",
+        "prisma": "^4.9.0",
+        "wrangler": "^2.8.0"
     }
 }

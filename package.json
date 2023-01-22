@@ -6,6 +6,7 @@
     "private": true,
     "workspaces": [
         "packages/client",
-        "packages/server"
+        "packages/server",
+        "packages/model"
     ]
 }

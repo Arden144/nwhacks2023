@@ -101,6 +101,7 @@ web_modules/
 .env.test.local
 .env.production.local
 .env.local
+.dev.vars
 
 # parcel-bundler cache (https://parceljs.org/)
 
@@ -167,3 +168,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.\*
+.vercel
