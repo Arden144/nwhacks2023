@@ -1,5 +1,7 @@
-import { css } from "@linaria/core";
-import { Course } from "model";
+import { css, cx } from "@linaria/core";
+import { Course, Question } from "model";
+import { useState } from "react";
+import { trpc } from "./trpc";
 
 const container = css`
   display: flex;
@@ -10,7 +12,7 @@ const container = css`
 const quiz = css`
   background-color: var(--background-color);
   border-radius: 2rem;
-  padding: 0 1rem;
+  padding: 2rem;
 `;
 
 const listButton = css`
@@ -55,6 +57,77 @@ const list = css`
   gap: 2px;
 `;
 
+const idle = css``;
+const correct = css`
+  background-color: green;
+`;
+const incorrect = css`
+  background-color: red;
+`;
+
+enum State {
+  Idle,
+  Incorrect,
+  Correct,
+}
+
+interface OptionProps {
+  question: Question;
+  choice: string;
+}
+
+function Option({ question, choice }: OptionProps) {
+  const [state, setState] = useState<State>(State.Idle);
+  const utils = trpc.useContext();
+
+  const answer = (q: Question, s: string) => async () => {
+    const result = await utils.client.question.submit.mutate({
+      questionId: q.id!,
+      answer: s,
+    });
+
+    setState(result.correct ? State.Correct : State.Incorrect);
+  };
+
+  const stateClass = (() => {
+    switch (state) {
+      case State.Idle:
+        return idle;
+      case State.Correct:
+        return correct;
+      case State.Incorrect:
+        return incorrect;
+    }
+  })();
+
+  return (
+    <li key={choice} className={cx(listItem, stateClass)}>
+      <button onClick={answer(question, choice)} className={listButton}>
+        {choice}
+      </button>
+    </li>
+  );
+}
+
+interface QuestionProps {
+  question: Question;
+  index: number;
+}
+
+function QuestionView({ question, index }: QuestionProps) {
+  return (
+    <div className={quiz}>
+      <h5>Question {index + 1}</h5>
+      <h1>{question.prompt}</h1>
+      <ol className={list}>
+        {question.choices.map((choice) => (
+          <Option question={question} choice={choice} />
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 interface Props {
   course: Course;
 }
@@ -68,26 +141,10 @@ function Quiz({ course }: Props) {
     );
   }
 
-  const answer = (i: number) => () => {
-    // console.log(question.choices[i]);
-  };
-
   return (
     <div className={container}>
       {course.questions.map((question, index) => (
-        <div className={quiz}>
-          <h5>Question {index + 1}</h5>
-          <h1>{question.prompt}</h1>
-          <ol className={list}>
-            {question.choices.map((choice, i) => (
-              <li key={choice} className={listItem}>
-                <button onClick={answer(i)} className={listButton}>
-                  {choice}
-                </button>
-              </li>
-            ))}
-          </ol>
-        </div>
+        <QuestionView question={question} index={index} />
       ))}
     </div>
   );

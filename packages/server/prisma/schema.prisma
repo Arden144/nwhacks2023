@@ -14,6 +14,7 @@ model Course {
   teacherId String     @db.ObjectId
   questions Question[]
   videos    Video[]
+  Score     Score[]
 }
 
 model Question {
@@ -21,13 +22,16 @@ model Question {
   answer   String
   choices  String[]
   prompt   String
-  course   Course @relation(fields: [courseId], references: [id])
-  courseId String @db.ObjectId
+  course   Course   @relation(fields: [courseId], references: [id])
+  courseId String   @db.ObjectId
+  scores   Result[]
 }
 
 model Student {
-  id      String @id @default(auto()) @map("_id") @db.ObjectId
-  name    String
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  name   String
+  sub    String  @unique
+  scores Score[]
 }
 
 model Teacher {
@@ -41,5 +45,27 @@ model Video {
   course     Course @relation(fields: [courseId], references: [id])
   courseId   String @db.ObjectId
   name       String
-  playbackId String
+  playbackId String @unique
+}
+
+model Result {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  correct    Boolean
+  question   Question @relation(fields: [questionId], references: [id])
+  questionId String   @db.ObjectId
+  score      Score    @relation(fields: [scoreId], references: [id])
+  scoreId    String   @db.ObjectId
+
+  @@unique([questionId, scoreId])
+}
+
+model Score {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  student   Student  @relation(fields: [studentId], references: [id])
+  studentId String   @db.ObjectId
+  course    Course   @relation(fields: [courseId], references: [id])
+  courseId  String   @db.ObjectId
+  results   Result[]
+
+  @@unique([studentId, courseId])
 }
