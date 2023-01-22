@@ -27,6 +27,7 @@
         "@auth0/auth0-react": "^2.0.0",
         "@fontsource/catamaran": "^4.5.10",
         "@fontsource/cormorant": "^4.5.10",
+        "@fontsource/inter": "^4.5.15",
         "@fontsource/open-sans": "^4.5.14",
         "@hookform/resolvers": "^2.9.10",
         "@livepeer/react": "^2.1.0",

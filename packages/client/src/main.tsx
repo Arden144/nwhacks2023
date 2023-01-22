@@ -11,6 +11,8 @@ import "index.css";
 import "@fontsource/catamaran";
 import "@fontsource/cormorant";
 import "@fontsource/open-sans";
+import "@fontsource/inter";
+import "@fontsource/inter/variable.css"
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
