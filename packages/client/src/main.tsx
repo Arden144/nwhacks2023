@@ -45,6 +45,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <Auth0Provider
       domain="nwhacks2023.us.auth0.com"
       clientId="AhniyiCqDbHs5Odk7wkZEeF1wAysIruU"
+      useRefreshTokens
+      cacheLocation="localstorage"
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}
