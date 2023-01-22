@@ -20,6 +20,10 @@ const heroButt = css`
   text-align: center;
   text-decoration: none;
   width: 10em;
+  :hover {
+    color: white;
+    background-color: var(--tertiary-color);
+  }
 `;
 
 const heroImage = css`
@@ -32,6 +36,10 @@ const heroImage = css`
 
 const logButt = css`
   margin-left: auto;
+  :hover {
+    color: white;
+    background-color: var(--tertiary-color);
+  }
 `;
 const links = css`
   text-decoration: none;
@@ -86,7 +94,10 @@ function App() {
   return (
     <div className={pageAlign}>
       <Toolbar>
-        <img src="logo.svg" />
+        <Link to="/" reloadDocument>
+          <img src="logo.svg" />
+        </Link>
+
         <input className={searchBar} placeholder="Search Courses" />
         <Link className={links} to="courses">
           Courses
@@ -111,8 +122,8 @@ function App() {
               Decentralized <br /> knowledge
             </h1>
             <p>
-              Learn from anyone, anywhere.<br/> Uncensored learning where mentors own
-              their content <br /> 
+              Learn from anyone, anywhere.
+              <br /> Uncensored learning where mentors own their content <br />
               with NFT authentication to secure your progress
             </p>
           </span>
