@@ -5,8 +5,6 @@ const container = css`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  // overflow-y: scroll;
-  // padding: 2rem;
 `;
 
 const quiz = css`

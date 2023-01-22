@@ -25,11 +25,6 @@ const Toolbar = styled.div`
   span > * {
     flex-shrink: 0;
   }
-
-  span > :not(:last-child) {'    padding-right: 2rem;
-  padding-left: 2rem;
-    padding-right: 2rem;
-  }
 `;
 
 export default Toolbar;
