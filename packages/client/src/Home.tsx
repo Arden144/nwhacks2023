@@ -3,7 +3,7 @@ import Button from "@lib/Button";
 import Hero from "@lib/Hero";
 import Title from "@lib/Title";
 import Toolbar from "@lib/Toolbar";
-import { css } from "@linaria/core";
+import { css, cx } from "@linaria/core";
 import { Link } from "react-router-dom";
 
 const heroButt = css`
@@ -14,18 +14,25 @@ const heroButt = css`
   font-weight: 500;
   padding: 1.2rem 2.5rem;
   border-radius: 2rem;
-  margin-left: 42%;
   align-items: center;
+  align-self: center;
   justify-content: center;
   text-align: center;
   text-decoration: none;
+  width: 10em;
 `;
 
 const heroImage = css`
   transform: translateY(-29px) scale(1.4);
   border-radius: 5rem;
+  @media only screen and (max-width: 60em) {
+    display: none;
+  }
 `;
 
+const logButt = css`
+  margin-left: auto;
+`;
 const links = css`
   text-decoration: none;
   color: var(--secondary-label)
@@ -33,10 +40,29 @@ const links = css`
   margin-right: 50px;
 `;
 
+const dis41 = css`
+  @media only screen and (max-width: 41em) {
+    display: none;
+  }
+`;
+const dis34 = css`
+  @media only screen and (max-width: 34em) {
+    display: none;
+  }
+`;
+const pageAlign = css`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`;
 const titleText = css`
   font-family: InterVariable, Inter;
   font-weight: 900;
   font-size: 3rem;
+`;
+
+const content = css`
+  flex-grow: 1;
 `;
 
 const searchBar = css`
@@ -45,6 +71,10 @@ const searchBar = css`
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 2rem;
+
+  @media only screen and (max-width: 60em) {
+    display: none;
+  }
 `;
 
 function App() {
@@ -54,50 +84,47 @@ function App() {
     logout({ logoutParams: { returnTo: window.location.origin } });
 
   return (
-    <div>
+    <div className={pageAlign}>
       <Toolbar>
-        <span>
-          <img src="logo.svg" />
-          <input className={searchBar} placeholder="Search Courses" />
-          <Link className={links} to="courses">
-            Courses
-          </Link>
-          <Link className={links} to="courses">
-            Programs
-          </Link>
-          <Link className={links} to="courses">
-            About Us
-          </Link>
-        </span>
+        <img src="logo.svg" />
+        <input className={searchBar} placeholder="Search Courses" />
+        <Link className={links} to="courses">
+          Courses
+        </Link>
+        <Link className={cx(links, dis41)} to="courses">
+          About Us
+        </Link>
         {isAuthenticated ? (
-          <Button onClick={() => logout()}>Log Out</Button>
+          <Button onClick={() => logout()} className={cx(logButt, dis34)}>
+            Log Out
+          </Button>
         ) : (
-          <span>
-            <Button onClick={() => loginWithRedirect()}>
-              Log In / Sign up
-            </Button>
-          </span>
+          <Button onClick={() => loginWithRedirect()} className={logButt}>
+            Log In / Sign up
+          </Button>
         )}
       </Toolbar>
-      <Hero>
-        <span>
-          <h1 className={titleText}>
-            Decentralized <br /> knowledge
-          </h1>
-          <p>
-            Learn from anyone, anywhere <br />
-            Uncensored learning where mentors own their content <br />
-            NFT authenitication to secure your progress
-          </p>
-        </span>
-        <img
-          className={heroImage}
-          src="FrontStudent.png"
-          alt="Logo"
-          width="268"
-          height="385"
-        />
-      </Hero>
+      <div className={content}>
+        <Hero>
+          <span>
+            <h1 className={titleText}>
+              Decentralized <br /> knowledge
+            </h1>
+            <p>
+              Learn from anyone, anywhere.<br/> Uncensored learning where mentors own
+              their content <br /> 
+              with NFT authentication to secure your progress
+            </p>
+          </span>
+          <img
+            className={heroImage}
+            src="FrontStudent.png"
+            alt="Logo"
+            width="268"
+            height="385"
+          />
+        </Hero>
+      </div>
       <Link to="/courses" className={heroButt}>
         View Courses
       </Link>
