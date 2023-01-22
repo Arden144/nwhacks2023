@@ -167,6 +167,22 @@ function Courses() {
               Computer Science | Beginner</p>
               </Link>
             </CourseWidget>
+            <CourseWidget>
+            <Link to={course.id}>
+            <img src="IntroCS.jpg" />
+              <h2>How to Code</h2>
+              <p>Teacher: Arden Sinclair <br/>
+              Computer Science | Beginner</p>
+              </Link>
+            </CourseWidget>
+            <CourseWidget>
+            <Link to={course.id}>
+            <img src="IntroCS.jpg" />
+              <h2>How to Code</h2>
+              <p>Teacher: Arden Sinclair <br/>
+              Computer Science | Beginner</p>
+              </Link>
+            </CourseWidget>
         </div>
         ))}
       </div>

@@ -7,6 +7,9 @@ const CourseWidget = styled.div`
     margin: 4rem 2rem;
     border-radius: 2rem;
     overflow: hidden;
+    :hover {
+        background-color: var(--tertiary-color);
+    }
 
     img {
         border-top-left-radius: 2rem;
