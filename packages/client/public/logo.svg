@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_5" data-name="Layer 5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 320.11 240.08">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #231f20;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #231f20;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+        stroke: #2b4691;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 6px;
+      }
+
+      .cls-6 {
+        filter: url(#luminosity-noclip);
+      }
+
+      .cls-7 {
+        mask: url(#mask-1);
+      }
+
+      .cls-8 {
+        mask: url(#mask);
+      }
+
+      .cls-5 {
+        stroke-dasharray: 0 0 30.01 22.01;
+      }
+
+      .cls-9 {
+        filter: url(#luminosity-noclip-2);
+      }
+    </style>
+    <filter id="luminosity-noclip" x="37.36" y="35.87" width="245.38" height="111" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask" x="37.36" y="35.87" width="245.38" height="111" maskUnits="userSpaceOnUse">
+      <g class="cls-6">
+        <g>
+          <line class="cls-2" x1="88.98" y1="119.2" x2="88.31" y2="123.81"/>
+          <polyline class="cls-2" points="89.68 114.27 88.98 119.2 109.83 107.92"/>
+          <polyline class="cls-2" points="224.32 72.48 221.23 50.96 98.77 50.96 89.68 114.27"/>
+          <line class="cls-2" x1="85.2" y1="145.55" x2="234.8" y2="145.55"/>
+        </g>
+      </g>
+    </mask>
+    <filter id="luminosity-noclip-2" x="37.36" y="35.87" width="245.38" height="111" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-color="#fff" result="bg"/>
+      <feBlend in="SourceGraphic" in2="bg"/>
+    </filter>
+    <mask id="mask-1" x="37.36" y="35.87" width="245.38" height="111" maskUnits="userSpaceOnUse">
+      <g class="cls-9">
+        <g>
+          <line class="cls-2" x1="231.14" y1="119.2" x2="231.8" y2="123.81"/>
+          <polyline class="cls-2" points="230.43 114.27 231.14 119.2 210.28 107.92"/>
+          <polyline class="cls-2" points="95.79 72.48 98.88 50.96 221.34 50.96 230.43 114.27"/>
+          <line class="cls-2" x1="234.92" y1="145.55" x2="85.31" y2="145.55"/>
+        </g>
+      </g>
+    </mask>
+  </defs>
+  <g>
+    <polygon class="cls-3" points="98.1 52.84 84.47 154.27 235.64 154.27 221.09 52.84 98.1 52.84"/>
+    <path class="cls-1" d="m102.11,49.77c-8.6,63.13-5.49,94.94-5.49,94.94,31.95-4.98,36.49-3.81,62.48,2.65l.75-94.6c-10.07-.55-22.64-10.8-45.11-7.42l-12.63,4.43Z"/>
+    <path class="cls-1" d="m109,40.76c-11.67,95.54-8.22,96.98-8.22,96.98,0,0,40.89-5.74,58.81,9.6V49.08c-15.75-8.4-28.94-11.87-40.08-10.69l-10.52,2.37Z"/>
+    <path class="cls-1" d="m217.58,49.77c8.6,63.13,5.49,94.94,5.49,94.94-31.95-4.98-36.49-3.81-62.48,2.65l-.75-94.6c10.07-.55,22.64-10.8,45.11-7.42l12.63,4.43Z"/>
+    <path class="cls-1" d="m210.21,40.76c11.64,95.54,8.19,96.98,8.19,96.98,0,0-40.88-5.74-58.81,9.6V49.08c15.78-8.4,28.96-11.87,40.1-10.69l10.52,2.37Z"/>
+  </g>
+  <g class="cls-8">
+    <g>
+      <path class="cls-4" d="m90.11,113.7c-4.89,2.22-9.43,4.33-13.6,6.33"/>
+      <path class="cls-5" d="m56.9,130.02c-44.1,24.34-.39,19.05,135.79-35.61,120.3-48.29,113.78-65.08-6.27-19.94-28.21,10.61-52.4,20.28-72.5,28.81"/>
+      <path class="cls-4" d="m103.82,107.62c-4.84,2.11-9.41,4.14-13.71,6.08"/>
+    </g>
+  </g>
+  <g class="cls-7">
+    <g>
+      <path class="cls-4" d="m230,113.7c4.89,2.22,9.43,4.33,13.6,6.33"/>
+      <path class="cls-5" d="m263.21,130.02c44.1,24.34.39,19.05-135.79-35.61C7.13,46.12,13.64,29.33,133.69,74.47c28.21,10.61,52.4,20.28,72.5,28.81"/>
+      <path class="cls-4" d="m216.29,107.62c4.84,2.11,9.41,4.14,13.71,6.08"/>
+    </g>
+  </g>
+</svg>

@@ -1,3 +1,23 @@
+:root {
+    --primary-color: #2b4591;
+    --secondary-color: #6575c8;
+    --tertiary-color: #cfa616;
+    
+    --primary-label: #ffffff;
+    --secondary-label: #000000;
+    --tertiary-label: #000000;
+    
+    --background-color: #edeeff;
+    --secondary-background-color: #f5f5f5;
+    --tertiary-background-color: #eeeeee;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        
+    }
+}
+
 html {
     height: 100%;
 }
@@ -5,7 +25,17 @@ html {
 body {
     margin: 0;
     min-height: 100%;
-    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: Catamaran, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: var(--tertiary-label);
+    background-color: var(--primary-color);
+}
+
+h1, h2 {
+    font-family: Cormorant;
+}
+
+h3, h3, h4 {
+    font-family: "Open Sans";
 }
 
 * {

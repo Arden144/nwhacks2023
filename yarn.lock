@@ -1089,6 +1089,21 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.17.tgz#c5a1a4bfe1b57f0c3e61b29883525c6da3e5c091"
   integrity sha512-y+EHuSchhL7FjHgvQL/0fnnFmO4T1bhvWANX6gcnqTjtnKWbTvUMCpGnv2+t+31d7RzyEAYAd4u2fnIhHL6N/Q==
 
+"@fontsource/catamaran@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/catamaran/-/catamaran-4.5.10.tgz#ae67dde02fcf4fbf304f4fd5c9a9c42bf38be39d"
+  integrity sha512-Z6+CzgAg1/UInHwRAWIzbSSS2r/20gXF6bmsbouHR7jJs8Mglr4K685RneJZc1VSFpmo9b8fDhhL5eGHGgQfPQ==
+
+"@fontsource/cormorant@^4.5.10":
+  version "4.5.10"
+  resolved "https://registry.yarnpkg.com/@fontsource/cormorant/-/cormorant-4.5.10.tgz#a3126f0c7ec425ae424756016192a2d9a6fdba27"
+  integrity sha512-hcerRmT8ML4+MMnasHKMMIaeNL/uR/Gs2nm5/w24ytCEW2JI2gwqP7YHjJbfS1GlblEC7AKNxYuv0w4Nfn3h9g==
+
+"@fontsource/open-sans@^4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-4.5.14.tgz#b3e1665c0b3fdfc1f030ded2843749e3cf3a5900"
+  integrity sha512-mBXIIETBlW8q/ocuUN0hyGow2iuf75hQEHQt8R/RJ/HcphVbLg8KB7pHYGbFGDqs75W+SWvTC7JkVeAjT65BuQ==
+
 "@hookform/resolvers@^2.9.10":
   version "2.9.10"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.9.10.tgz#e7e88942ee34e97b7bc937b0be4694194c9cd420"

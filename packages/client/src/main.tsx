@@ -2,13 +2,15 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import TRPCProvider from "@lib/TRPCProvider";
 import {
   createReactClient,
-  studioProvider,
   LivepeerConfig,
+  studioProvider,
 } from "@livepeer/react";
 import Courses from "Courses";
 import Home from "Home";
 import "index.css";
-import Livepeer from "Livepeer";
+import "@fontsource/catamaran";
+import "@fontsource/cormorant";
+import "@fontsource/open-sans";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
