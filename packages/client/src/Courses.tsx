@@ -1,5 +1,6 @@
 import { trpc } from "@lib/trpc";
 import { Player } from "@livepeer/react";
+import { Link } from "react-router-dom";
 
 function Courses() {
   const courses = trpc.course.list.useQuery({ questions: true, videos: true });
@@ -12,7 +13,9 @@ function Courses() {
     <ul>
       {courses.data.map((course) => (
         <li key={course.id}>
-          <h3>{course.name}</h3>
+          <Link to={course.id}>
+            <h3>{course.name}</h3>
+          </Link>
           <h4>Questions:</h4>
           <ul>
             {course.questions.map((question) => (

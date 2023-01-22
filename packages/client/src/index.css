@@ -6,7 +6,7 @@
     --primary-label: #ffffff;
     --secondary-label: #000000;
     --tertiary-label: #000000;
-    
+
     --background-color: #fdfdfd;
     --secondary-background-color: #f5f5f5;
     --tertiary-background-color: #eeeeee;
@@ -24,18 +24,22 @@ html {
 
 body {
     margin: 0;
-    min-height: 100%;
-    font-family: Catamaran, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    height: 100%;
+    font-family: CatamaranVariable, Catamaran, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: var(--tertiary-label);
     background-color: var(--primary-color);
 }
 
+#root {
+    height: 100%;
+}
+
 h1, h2 {
-    font-family: Cormorant;
+    font-family: InterVariable, Inter;
 }
 
 h3, h3, h4 {
-    font-family: "Open Sans";
+    font-family: InterVariable, Inter;
 }
 
 p {

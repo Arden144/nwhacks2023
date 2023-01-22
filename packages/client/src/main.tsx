@@ -12,10 +12,14 @@ import "@fontsource/catamaran";
 import "@fontsource/cormorant";
 import "@fontsource/open-sans";
 import "@fontsource/inter";
-import "@fontsource/inter/variable.css"
+import "@fontsource/catamaran/variable.css";
+import "@fontsource/cormorant/variable.css";
+import "@fontsource/open-sans/variable.css";
+import "@fontsource/inter/variable.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import CoursePlayer from "CoursePlayer";
 
 const client = createReactClient({
   provider: studioProvider({ apiKey: "99d58c2e-935e-4258-8079-57ab1d94f6e1" }),
@@ -29,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "courses",
     element: <Courses />,
+  },
+  {
+    path: "courses/:courseId",
+    element: <CoursePlayer />,
   },
 ]);
 
