@@ -10,7 +10,7 @@ const container = css`
 `;
 
 const quiz = css`
-  background-color: var(--background-color);
+  background-color: var(--secondary-background-color);
   border-radius: 2rem;
   padding: 2rem;
 `;
@@ -24,7 +24,7 @@ const listButton = css`
 `;
 
 const listItem = css`
-  background-color: var(--secondary-background-color);
+  background-color: var(--tertiary-background-color);
   padding: 1rem;
   font-family: "Open Sans";
   font-size: 1.5rem;
@@ -59,10 +59,10 @@ const list = css`
 
 const idle = css``;
 const correct = css`
-  background-color: green;
+  background-color: #66bb6a !important;
 `;
 const incorrect = css`
-  background-color: red;
+  background-color: #ff867c !important;
 `;
 
 enum State {
@@ -101,10 +101,12 @@ function Option({ question, choice }: OptionProps) {
   })();
 
   return (
-    <li key={choice} className={cx(listItem, stateClass)}>
-      <button onClick={answer(question, choice)} className={listButton}>
-        {choice}
-      </button>
+    <li
+      key={choice}
+      onClick={answer(question, choice)}
+      className={cx(listItem, stateClass)}
+    >
+      {choice}
     </li>
   );
 }

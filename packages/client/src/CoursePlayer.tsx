@@ -19,7 +19,7 @@ const container = css`
 `;
 
 const Grid = styled.div`
-  background-color: white;
+  background-color: var(--background-color);
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -42,7 +42,7 @@ const Header = styled.div`
   justify-content: space-between;
   height: 4rem;
   padding: 0 2rem;
-  background-color: white;
+  background-color: var(--background-color);
   border-bottom: 1px solid black;
 
   span {
@@ -75,7 +75,7 @@ const list = css`
 `;
 
 const videoInfo = css`
-  background-color: var(--secondary-background-color);
+  background-color: var(--tertiary-background-color);
   padding: 0.5rem 2rem;
   font-size: 1rem;
   font-weight: 900;
