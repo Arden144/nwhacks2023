@@ -1,0 +1,16 @@
+.overlay {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	color: white;
+	font-family: InterVariable, Inter;
+	font-weight: 900;
+	font-size: 1rem;
+}

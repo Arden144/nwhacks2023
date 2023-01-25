@@ -1,0 +1,14 @@
+.button {
+  margin-left: auto;
+}
+
+.button:hover {
+  color: white;
+  background-color: var(--tertiary-color);
+}
+
+@media only screen and (max-width: 34em) {
+  .button {
+    display: none;
+  }
+}

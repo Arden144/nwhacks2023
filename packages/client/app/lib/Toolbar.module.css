@@ -1,0 +1,46 @@
+.toolbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 4rem;
+	padding: 0 2rem;
+	background-color: var(--background-color);
+	z-index: 100;
+
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.toolbar span {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.button {
+	border-radius: 1rem;
+}
+
+.toolbar img {
+	height: 4rem;
+	padding: 1rem 0;
+}
+
+.searchBar {
+	font-size: 16px;
+	margin-right: 50px;
+	padding: 6px;
+	border: 1px solid #ccc;
+	border-radius: 2rem;
+}
+
+@media only screen and (max-width: 60em) {
+	.searchBar {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 41em) {
+	.dis41 {
+		display: none;
+	}
+}
