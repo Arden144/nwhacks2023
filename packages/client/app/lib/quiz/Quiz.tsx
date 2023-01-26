@@ -18,7 +18,7 @@ function Quiz({ course }: Props) {
 	return (
 		<div className={styles.container}>
 			{course.questions.map((question, index) => (
-				<QuestionView question={question} index={index} />
+				<QuestionView key={question.id} question={question} index={index} />
 			))}
 		</div>
 	);

@@ -70,7 +70,7 @@ export default async function Courses() {
 				<div key={course.id} className={styles.courseDisplay}>
 					<CourseWidget>
 						<Link href={`/courses/${course.id}`}>
-							<Image src={courseImage} alt="Intro to CS" />
+							<Image src={courseImage} alt="Intro to CS" placeholder="blur" />
 							<h2>How to Code</h2>
 							<p>
 								Teacher: Arden Sinclair <br />

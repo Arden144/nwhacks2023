@@ -9,7 +9,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
 
 	return (
 		<div>
-			<h3>Sorry, that course doesn't exist.</h3>
+			<h3>Sorry, that course doesn&apos;t exist.</h3>
 			<button onClick={() => reset()}>Try again</button>
 		</div>
 	);

@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "./logo.svg";
 import SignInButton from "./SignInButton";
 import styles from "./Toolbar.module.css";
 
@@ -6,7 +8,7 @@ export default function Toolbar() {
 	return (
 		<div className={styles.toolbar}>
 			<Link href="/" style={{ display: "contents" }}>
-				<img src="/logo.svg" />
+				<Image src={logo} alt="ChainLearn" placeholder="blur" />
 			</Link>
 
 			<span>

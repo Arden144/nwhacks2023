@@ -25,7 +25,6 @@ export default function App() {
 					width="268"
 					height="385"
 					priority
-					placeholder="blur"
 				/>
 			</Hero>
 			<Link href="/courses" className={styles.heroButton}>
