@@ -1,16 +1,16 @@
-.displayContents {
-	display: contents;
+.scroll {
+	background-color: var(--background-color);
+	overflow-y: scroll;
+	height: 100%;
 }
 
-.container {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
+@media only screen and (min-width: 30em) {
+	.scroll {
+		padding: 1rem 2rem;
+	}
 }
 
 .grid {
-	background-color: white;
 	display: flex;
 	flex-direction: column;
 }
@@ -21,22 +21,6 @@
 		grid-template-columns: 2fr 1fr;
 		gap: 2rem;
 	}
-}
-
-.header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 4rem;
-	padding: 0 2rem;
-	background-color: white;
-	border-bottom: 1px solid black;
-}
-
-.header span {
-	display: flex;
-	align-items: center;
-	gap: 2rem;
 }
 
 @media only screen and (min-width: 60em) {

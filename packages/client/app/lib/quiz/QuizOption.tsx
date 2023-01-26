@@ -1,7 +1,6 @@
 "use client";
 
 import type { Question } from "@prisma/client/edge";
-import { useSession } from "next-auth/react";
 import { useState } from "react";
 import styles from "./quiz.module.css";
 
@@ -17,13 +16,15 @@ interface OptionProps {
 }
 
 export default function Option({ question, choice }: OptionProps) {
-	useSession({ required: true });
 	const [state, setState] = useState<State>(State.Idle);
 
 	const answer = (q: Question, s: string) => async () => {
 		const res = await fetch("/api/question/submit", {
 			method: "POST",
 			body: JSON.stringify({ questionId: q.id, answer: s }),
+			headers: {
+				"Content-Type": "application/json",
+			},
 		});
 		const result = await res.json();
 		if (!result.success) {
@@ -45,10 +46,12 @@ export default function Option({ question, choice }: OptionProps) {
 	})();
 
 	return (
-		<li key={choice} className={`${styles.listItem} ${stateClass}`}>
-			<button onClick={answer(question, choice)} className={styles.listButton}>
-				{choice}
-			</button>
+		<li
+			key={choice}
+			onClick={answer(question, choice)}
+			className={`${styles.listItem} ${stateClass}`}
+		>
+			{choice}
 		</li>
 	);
 }

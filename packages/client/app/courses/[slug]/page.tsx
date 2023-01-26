@@ -35,11 +35,13 @@ export default async function CoursePlayer({ params }: Props) {
 	}
 
 	return (
-		<div className={styles.grid}>
-			<div>
-				<Player name={course.name} videos={course.videos} />
+		<div className={styles.scroll}>
+			<div className={styles.grid}>
+				<div>
+					<Player name={course.name} videos={course.videos} />
+				</div>
+				<Quiz course={course} />
 			</div>
-			<Quiz course={course} />
 		</div>
 	);
 }

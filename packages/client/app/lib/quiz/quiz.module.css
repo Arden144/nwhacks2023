@@ -54,9 +54,9 @@
 }
 
 .correct {
-	background-color: green;
+	background-color: #66bb6a !important;
 }
 
 .incorrect {
-	background-color: red;
+	background-color: #ff867c !important;
 }

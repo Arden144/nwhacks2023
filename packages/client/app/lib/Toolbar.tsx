@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SignInButton from "SignInButton";
+import SignInButton from "./SignInButton";
 import styles from "./Toolbar.module.css";
 
 export default function Toolbar() {

@@ -1,0 +1,18 @@
+.button {
+	padding: 0.5rem 1rem;
+	color: var(--primary-label);
+	background-color: var(--primary-color);
+	border: none;
+	border-radius: 1rem;
+}
+
+.button:hover {
+	color: white;
+	background-color: var(--tertiary-color);
+}
+
+@media only screen and (max-width: 34em) {
+	.button {
+		display: none;
+	}
+}

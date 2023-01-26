@@ -1,3 +1,9 @@
 export default function Head() {
-    return <><title>ChainLearn</title></>;
+	return (
+		<>
+			<meta charSet="UTF-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<title>ChainLearn</title>
+		</>
+	);
 }

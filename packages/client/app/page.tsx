@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "page.module.css";
 import heroImage from "./FrontStudent.png";
 
-function App() {
+export default function App() {
 	return (
 		<div className={styles.pageAlign}>
 			<Hero>
@@ -34,5 +34,3 @@ function App() {
 		</div>
 	);
 }
-
-export default App;
