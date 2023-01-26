@@ -8,7 +8,7 @@ export default function App() {
 	return (
 		<div className={styles.pageAlign}>
 			<Hero>
-				<span>
+				<span className={styles.descriptionContainer}>
 					<h1 className={styles.titleText}>
 						Decentralized <br /> knowledge
 					</h1>
@@ -21,9 +21,9 @@ export default function App() {
 				<Image
 					className={styles.heroImage}
 					src={heroImage}
-					alt="A girl smiling"
-					width="268"
-					height="385"
+					alt="A girl smiling, holding a coffee and her phone."
+					height={548}
+					width={379}
 					priority
 				/>
 			</Hero>

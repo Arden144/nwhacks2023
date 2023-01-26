@@ -9,7 +9,7 @@ export default function SignInButton() {
 	if (status === "loading" || status === "unauthenticated") {
 		return (
 			<button className={styles.button} onClick={() => signIn()}>
-				Log In / Sign up
+				Sign In
 			</button>
 		);
 	}

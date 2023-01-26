@@ -25,6 +25,7 @@
 .toolbar img {
 	height: 4rem;
 	padding: 1rem 0;
+	width: auto;
 }
 
 .searchBar {

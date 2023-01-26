@@ -8,7 +8,7 @@ export default function Toolbar() {
 	return (
 		<div className={styles.toolbar}>
 			<Link href="/" style={{ display: "contents" }}>
-				<Image src={logo} alt="ChainLearn" placeholder="blur" />
+				<Image src={logo} alt="ChainLearn" />
 			</Link>
 
 			<span>
