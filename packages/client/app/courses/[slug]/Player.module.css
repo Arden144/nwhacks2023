@@ -1,0 +1,16 @@
+@media only screen and (min-width: 60em) {
+	.content {
+		position: sticky;
+		top: 0px;
+	}
+}
+
+.info {
+	padding: 0 1rem;
+}
+
+.list {
+	display: flex;
+	list-style: none;
+	gap: 1rem;
+}

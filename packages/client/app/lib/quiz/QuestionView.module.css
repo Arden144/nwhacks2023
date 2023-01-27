@@ -1,0 +1,15 @@
+.quiz {
+	background-color: var(--secondary-background-color);
+	border-radius: 2rem;
+	padding: 2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	border-radius: 0.5rem;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+	gap: 2px;
+}

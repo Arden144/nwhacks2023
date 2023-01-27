@@ -3,7 +3,7 @@
 import { Player as LivepeerPlayer } from "@livepeer/react";
 import type { Video } from "@prisma/client/edge";
 import { useLayoutEffect, useState } from "react";
-import styles from "./page.module.css";
+import styles from "./Player.module.css";
 import { VideoInfo } from "./VideoInfo";
 
 interface Props {

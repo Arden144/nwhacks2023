@@ -1,0 +1,7 @@
+.videoInfo {
+	background-color: var(--secondary-background-color);
+	padding: 0.5rem 2rem;
+	font-size: 1rem;
+	font-weight: 900;
+	border-radius: 0.5rem;
+}

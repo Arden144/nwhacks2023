@@ -4,14 +4,11 @@
 	border: none;
 	font-size: 20px;
 	font-weight: 500;
-	padding: 1.2rem 2.5rem;
+	padding: 1rem 2rem;
 	border-radius: 2rem;
-	align-items: center;
 	align-self: center;
-	justify-content: center;
 	text-align: center;
 	text-decoration: none;
-	width: 10em;
 }
 
 .heroButton:hover {
@@ -51,8 +48,4 @@
 	font-family: var(--font-inter);
 	font-weight: 900;
 	font-size: 3rem;
-}
-
-.content {
-	flex-grow: 1;
 }

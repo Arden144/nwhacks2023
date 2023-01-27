@@ -1,5 +1,5 @@
 import type { Video } from "@prisma/client/edge";
-import styles from "./page.module.css";
+import styles from "./VideoInfo.module.css";
 
 interface VideoInfoProps {
 	video: Video;

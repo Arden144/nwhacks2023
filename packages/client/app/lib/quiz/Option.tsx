@@ -2,7 +2,7 @@
 
 import type { Question } from "@prisma/client/edge";
 import { useState } from "react";
-import styles from "./quiz.module.css";
+import styles from "./Option.module.css";
 
 enum State {
 	Idle,

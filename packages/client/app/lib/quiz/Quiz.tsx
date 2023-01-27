@@ -1,6 +1,6 @@
 import { Course, Question } from "@prisma/client/edge";
 import QuestionView from "./QuestionView";
-import styles from "./quiz.module.css";
+import styles from "./Quiz.module.css";
 
 interface Props {
 	course: Course & { questions: Question[] };

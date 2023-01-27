@@ -1,6 +1,6 @@
 import type { Question } from "@prisma/client/edge";
-import styles from "./quiz.module.css";
-import Option from "./QuizOption";
+import Option from "./Option";
+import styles from "./QuestionView.module.css";
 
 interface Props {
 	question: Question;

@@ -1,0 +1,33 @@
+.listItem {
+	padding: 1rem;
+	font-size: 1.5rem;
+	font-weight: 900;
+}
+
+.listItem:first-child {
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}
+
+.listItem:last-child {
+	border-bottom-left-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom: none;
+}
+
+.listItem:hover {
+	color: white;
+	background-color: var(--primary-color);
+}
+
+.idle {
+	background-color: var(--tertiary-background-color);
+}
+
+.correct {
+	background-color: #66bb6a !important;
+}
+
+.incorrect {
+	background-color: #ff867c !important;
+}

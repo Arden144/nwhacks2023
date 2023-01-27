@@ -4,15 +4,15 @@
 	height: 100%;
 }
 
+.grid {
+	display: flex;
+	flex-direction: column;
+}
+
 @media only screen and (min-width: 30em) {
 	.scroll {
 		padding: 1rem 2rem;
 	}
-}
-
-.grid {
-	display: flex;
-	flex-direction: column;
 }
 
 @media only screen and (min-width: 60em) {
@@ -21,34 +21,4 @@
 		grid-template-columns: 2fr 1fr;
 		gap: 2rem;
 	}
-}
-
-@media only screen and (min-width: 60em) {
-	.content {
-		position: sticky;
-		top: 0px;
-	}
-}
-
-.info {
-	padding: 0 1rem;
-}
-
-.logo {
-	height: 100%;
-	padding: 1.25rem 0;
-}
-
-.list {
-	display: flex;
-	list-style: none;
-	gap: 1rem;
-}
-
-.videoInfo {
-	background-color: var(--secondary-background-color);
-	padding: 0.5rem 2rem;
-	font-size: 1rem;
-	font-weight: 900;
-	border-radius: 0.5rem;
 }
